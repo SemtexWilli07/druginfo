@@ -6,8 +6,28 @@
     <meta name="auhtor" content="Neumueller Oliver">
     <link rel="stylesheet" href="impressum.css">
     <title>Impressumg</title>
+    <script>
+        // Funktion zum Laden des Headers über AJAX
+        function loadHeader() {
+            var xhr = new XMLHttpRequest();
+            xhr.open("GET", "../header/header.html", true);
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState == 4 && xhr.status == 200) {
+                    document.getElementById("header").innerHTML = xhr.responseText;
+                }
+            };
+            xhr.send();
+        }
+        
+        // Seite geladen: Header laden
+        window.onload = loadHeader;
+    </script>
 </head>
+<div id="header"></div>
 <body>
+
+   
+
     <h1>Impressum</h1>
     <h2>Team</h2>
     <h3>Willi Wesemeier</h3>
