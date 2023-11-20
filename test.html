@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suchleiste Beispiel</title>
+    <style>
+        #search-box {
+            width: 300px;
+            padding: 8px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Suche auf der Seite</h1>
+
+    <input type="text" id="search-box" placeholder="Begriff eingeben..." oninput="searchFunction()">
+
+    <div id="search-results">
+        <!-- Hier werden die Suchergebnisse angezeigt -->
+    </div>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. ...</p>
+    <p>... Weitere Inhalte auf der Seite ...</p>
+
+    <script>
+        function searchFunction() {
+            var input, filter, paragraphs, i;
+            input = document.getElementById('search-box');
+            filter = input.value.toUpperCase();
+            paragraphs = document.getElementsByTagName('p');
+
+            for (i = 0; i < paragraphs.length; i++) {
+                if (paragraphs[i].innerText.toUpperCase().includes(filter)) {
+                    paragraphs[i].style.display = '';
+                } else {
+                    paragraphs[i].style.display = 'none';
+                }
+            }
+        }
+    </script>
+
+</body>
+</html>

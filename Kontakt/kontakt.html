@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kontakt</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+  <script src="../header/header.js"></script>
+</head>
+
+<body>
+  <header>
+    <div id="header"></div>
+  </header>
+  <form action="mailto:olineumueller@gmail.com" method="post" enctype="text/plain">
+    <div class="mb-3">
+      <label for="email">E-Mail:</label><br>
+      <input type="email" class="form-control" id="email" name="email" required>
+      <div id="nametext2" class="form-text">Ihre E-Mail Adresse wird niemals mit Dritten geteilt!</div>  
+    </div>
+    <div class="mb-3">
+      <label for="name">Name:</label>
+      <input type="text" id="name" class="form-control" name="name" required>
+      <div id="nametext" class="form-text">Vorname oder Nickname</div>
+    </div>
+    <div class="mb-3">
+      <label for="message">Nachricht:</label>
+      <textarea id="message" name="message" class="form-control" rows="9" required></textarea>
+    </div>
+    <div class="form-check">
+      <input type="checkbox" class="form-check-input" id="exampleCheck1" value="akzeptiert">
+      <label class="form-check-label" for="exampleCheck1">Ihre Frage darf im FAQ bereich zu sehen sein. (Nicht verpfilchtend)</label>
+    </div>
+    <button type="submit" class="btn btn-primary">Senden</button>
+  </form>
+
+  <footer class="fixed-bottom">
+    <div id="footer"></div>
+  </footer>
+
+</body>
+
+</html>
